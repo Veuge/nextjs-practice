@@ -10,11 +10,13 @@ export default function NewsPage() {
   return (
     <>
       <h1>News Page</h1>
-      {news.map((newDetails) => (
-        <Link key={newDetails.id} href={`/news/${newDetails.id}`}>
-          <p>{newDetails.title}</p>
-        </Link>
-      ))}
+      <main className="news-list">
+        {news.map((newDetails) => (
+          <Link key={newDetails.id} href={`/news/${newDetails.id}`}>
+            <p>{newDetails.title}</p>
+          </Link>
+        ))}
+      </main>
     </>
   );
 }
