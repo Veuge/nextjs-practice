@@ -10,10 +10,12 @@ export default function InterceptedImagePage({ params }) {
 
   return (
     <>
-      <h2>Intercepted</h2>
-      <div className="fullscreen-image">
-        <img src={`/images/news/${newItem.image}`} alt={newItem.title} />
-      </div>
+      <div className="modal-backdrop"></div>
+      <dialog className="modal" open>
+        <div className="fullscreen-image">
+          <img src={`/images/news/${newItem.image}`} alt={newItem.title} />
+        </div>
+      </dialog>
     </>
   );
 }
